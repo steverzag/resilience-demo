@@ -68,7 +68,7 @@ Example endpoints:
 
 When running with Aspire, the ResilienceDemo.Worker project is started alongside the API. It performs requests to the API every 2 seconds to simulate load and help observe the resilience strategies in action.
 
-The parameters used by the Worker when calling the API can be tunned in the [./ResilienceDemo.Worker/WeatherClient class](ResilienceDemo.Worker/WeatherClient.cs) class, via its constant values:
+The parameters used by the Worker when calling the API can be tunned in the [./ResilienceDemo.Worker/WeatherClient class](ResilienceDemo.Worker/WeatherClient.cs), via its constant values:
 
 ![Worker weather client's constants](https://github.com/steverzag/docs-assets/blob/main/images/resilience-demo-worker-weather-client-consts.png)
 
