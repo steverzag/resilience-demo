@@ -35,6 +35,7 @@ builder.Services.AddHttpClient<V2WeatherService>(client =>
 })
 	.AddStandardResilienceHandler(options => {
 		//options.Retry.DisableFor(HttpMethod.Post, HttpMethod.Delete); // Prevent retries for POST and DELETE requests
+
 		// Prevent retries for unsafe HTTP methods (POST, PUT, DELETE, PATCH, CONNECT) see https://www.rfc-editor.org/rfc/rfc7231#section-4.2.1 for more context
 		options.Retry.DisableForUnsafeHttpMethods(); // Prevent retries for unsafe HTTP methods (POST, PUT, DELETE, PATCH, CONNECT) see
 	});
