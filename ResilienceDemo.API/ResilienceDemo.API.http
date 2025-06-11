@@ -1,0 +1,17 @@
+@ResilienceDemo.API_HostAddress = http://localhost:5000
+
+###Current Weather By City
+GET {{ResilienceDemo.API_HostAddress}}/current/by-city?cityName=miami
+Accept: application/json
+
+###Current Weather By Location
+GET {{ResilienceDemo.API_HostAddress}}/current?lon=-80.1937&lat=25.7743
+Accept: application/json
+
+###Forecast By City
+GET {{ResilienceDemo.API_HostAddress}}/forecast/by-city?cityName=miami
+Accept: application/json
+
+###Forecast By Location
+GET {{ResilienceDemo.API_HostAddress}}/forecast?lon=-80.1937&lat=25.7743
+Accept: application/json
