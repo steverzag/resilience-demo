@@ -66,6 +66,17 @@ Example endpoints:
 
  > Refer to the included [ResilienceDemo.API.http](ResilienceDemo.API/ResilienceDemo.API.http) file for more details.
 
+When running with Aspire, the ResilienceDemo.Worker project is started alongside the API. It performs requests to the API every 2 seconds to simulate load and help observe the resilience strategies in action.
+
+The parameters used by the Worker when calling the API can be tunned in the [./ResilienceDemo.Worker/WeatherClient class](ResilienceDemo.Worker/WeatherClient.cs) class, via its constant values:
+
+![Worker weather client's constants](https://github.com/steverzag/docs-assets/blob/main/images/resilience-demo-worker-weather-client-consts.png)
+
+The API exposes two versions of the weather endpoints:
+
+ - v1 – Used to demonstrate how different custom resilience strategies can be implemented.
+ - v2 – Uses the Standard Resilience Handler provided by .NET Resilience Strategies.
+
 ## References
  - [OpenWeatherMap API Docs](https://openweathermap.org/api)
  - [Polly Docs](https://www.pollydocs.org/index.html)
